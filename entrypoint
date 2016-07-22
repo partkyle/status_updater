@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundle exec ruby update-github-status.rb $@
