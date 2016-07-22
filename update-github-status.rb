@@ -29,7 +29,7 @@ OptionParser.new do |opts|
 end.parse!
 
 def owner_repo(git_url)
-  git_url.gsub(/^git@github.com:/, '').gsub(/.git$/, '')
+  git_url.gsub(/^git@github.com:/, '').gsub(/^https:\/\/github.com\//).gsub(/.git$/, '')
 end
 
 client = Octokit::Client.new(:access_token => options[:token], :debug => true)
